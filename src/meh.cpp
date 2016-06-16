@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <signal.h>
+#include <strings.h>
 
 #include <../include/colors.h>
 
