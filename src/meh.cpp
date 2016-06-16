@@ -11,7 +11,7 @@
 #include <signal.h>
 #include <strings.h>
 
-#include <../include/colors.h>
+#include <colors.h>
 
 int filefd;
 int sockfd;
@@ -20,7 +20,7 @@ void sig_handler(int signo)
 {
     if (signo == SIGINT)
     {
-        std::cerr << YELLOW << "SIG_INT caught, closing sockets and terminating program." << COLOR_RESET << std::endl;
+        std::cerr << YELLOW << "\nSIG_INT caught, closing sockets and terminating program." << COLOR_RESET << std::endl;
         if (filefd)
             close(filefd);
         close(sockfd);
