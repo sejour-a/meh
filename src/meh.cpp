@@ -81,6 +81,7 @@ int main(int ac, char **av)
         if ((filefd = open(filename.c_str(), O_RDONLY)) == -1)
         {
             std::cerr << RED << "Can't open " << YELLOW << filename << COLOR_RESET << std::endl;
+            close(sockfd);
             return 5;
         }
     }
